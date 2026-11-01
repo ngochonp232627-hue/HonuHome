@@ -12,7 +12,7 @@ export function UnpaidInvoicesCard({ summary }: UnpaidInvoicesCardProps) {
   );
 
   return (
-    <div className="bg-white rounded-3xl p-6 lg:p-7 border border-[#E3EDF6] shadow-sm flex flex-col justify-between h-[397px]">
+    <div className="bg-white rounded-3xl p-5 sm:p-6 lg:p-7 border border-[#E3EDF6] shadow-sm flex flex-col justify-between min-h-[340px] sm:h-[397px]">
       {/* Header */}
       <div>
         <p className="text-base font-bold text-[#253F5B] leading-snug">

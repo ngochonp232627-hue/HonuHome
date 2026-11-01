@@ -46,11 +46,11 @@ export function RevenueChart({ data, totalFormatted }: RevenueChartProps) {
   const xTicks = [1, 5, 10, 15, 20, 25, 30, 35, 40, 45];
 
   return (
-    <div className="bg-white rounded-3xl p-6 lg:p-7 border border-[#E3EDF6] shadow-sm flex flex-col justify-between h-[397px]">
+    <div className="bg-white rounded-3xl p-5 sm:p-6 lg:p-7 border border-[#E3EDF6] shadow-sm flex flex-col justify-between min-h-[360px] sm:h-[397px]">
       {/* Card Header */}
       <div>
-        <p className="text-base font-semibold text-[#68819D]">Doanh thu tháng</p>
-        <p className="text-3xl font-extrabold text-[#253F5B] tracking-tight mt-1">
+        <p className="text-sm sm:text-base font-semibold text-[#68819D]">Doanh thu tháng</p>
+        <p className="text-2xl sm:text-3xl font-extrabold text-[#253F5B] tracking-tight mt-1">
           {totalFormatted}
         </p>
       </div>

@@ -37,7 +37,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       default: "h-11 px-6 text-sm rounded-xl",
       sm: "h-9 px-4 text-xs rounded-lg",
       lg: "h-14 px-8 text-base rounded-2xl",
-      pill: "h-[60px] px-8 text-base rounded-[40px]",
+      pill: "h-[52px] sm:h-[60px] px-6 sm:px-8 text-sm sm:text-base rounded-[40px]",
     };
 
     return (

@@ -24,7 +24,7 @@ interface SidebarProps {
 const navItems = [
   {
     name: "Trang chủ",
-    href: "/",
+    href: "/dashboard",
     icon: LayoutDashboard,
   },
   {
@@ -86,7 +86,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         {/* Top Header & Logo */}
         <div className="space-y-6">
           <div className="flex items-center justify-between px-3">
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link href="/dashboard" className="flex items-center gap-3 group">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#5C84BE] to-[#426ba8] flex items-center justify-center text-white shadow-md shadow-[#5C84BE]/20 group-hover:scale-105 transition-transform">
                 <Home className="w-6 h-6 stroke-[2.2]" />
               </div>
@@ -115,8 +115,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive =
-                item.href === "/"
-                  ? pathname === "/"
+                item.href === "/dashboard"
+                  ? pathname === "/dashboard" || pathname === "/"
                   : pathname.startsWith(item.href);
 
               return (

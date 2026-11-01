@@ -77,9 +77,9 @@ export function LoginForm() {
             type: "success",
             text: res.message || "Đăng nhập thành công!",
           });
-          // Redirect to dashboard (hoặc trang quản lý)
+          // Redirect to dashboard
           setTimeout(() => {
-            router.push("/");
+            router.push("/dashboard");
           }, 1000);
         } else {
           setServerMessage({
@@ -166,7 +166,7 @@ export function LoginForm() {
         />
 
         {/* Remember me & Forgot Password */}
-        <div className="flex items-center justify-between pt-1 text-sm">
+        <div className="flex flex-wrap items-center justify-between gap-2 pt-1 text-sm">
           <Checkbox
             id="rememberMe"
             name="rememberMe"
@@ -179,7 +179,7 @@ export function LoginForm() {
 
           <Link
             href="/forgot-password"
-            className="text-white/90 hover:text-white font-medium hover:underline transition-all text-xs sm:text-sm"
+            className="text-white/90 hover:text-white font-medium hover:underline transition-all text-xs sm:text-sm ml-auto"
           >
             Forgot password?
           </Link>

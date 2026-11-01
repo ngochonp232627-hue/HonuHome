@@ -14,7 +14,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
       <div className="w-full space-y-1.5">
         <div className="relative flex items-center">
           {iconStart && (
-            <div className="absolute left-5 text-white/70 pointer-events-none">
+            <div className="absolute left-4 sm:left-5 text-white/70 pointer-events-none">
               {iconStart}
             </div>
           )}
@@ -22,16 +22,16 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
             type={type}
             ref={ref}
             className={cn(
-              "w-full h-[60px] bg-white/20 hover:bg-white/25 focus:bg-white/30 backdrop-blur-md text-white placeholder:text-white/70 border-2 border-white/80 focus:border-white rounded-[20px] px-6 text-base outline-none transition-all duration-200",
-              iconStart && "pl-14",
-              iconEnd && "pr-14",
+              "w-full h-[52px] sm:h-[60px] bg-white/20 hover:bg-white/25 focus:bg-white/30 backdrop-blur-md text-white placeholder:text-white/70 border-2 border-white/80 focus:border-white rounded-[18px] sm:rounded-[20px] px-5 sm:px-6 text-base outline-none transition-all duration-200",
+              iconStart && "pl-12 sm:pl-14",
+              iconEnd && "pr-12 sm:pr-14",
               error && "border-red-400 focus:border-red-400 bg-red-500/10",
               className
             )}
             {...props}
           />
           {iconEnd && (
-            <div className="absolute right-5 flex items-center">{iconEnd}</div>
+            <div className="absolute right-4 sm:right-5 flex items-center">{iconEnd}</div>
           )}
         </div>
         {error && (
